@@ -1,0 +1,17 @@
+#donate-alert > a::after {
+  content: '\00BB';
+  margin-left: 0.5rem;
+  font-size: 20px;
+  background-color: var(--color-header);
+  color: var(--color-header3);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 18px;
+  transition: all 0.2s ease-in-out 0s;
+  display: inline-block;
+}
+#donate-alert > a:hover::after {
+  transform: translateX(5px);
+  background-color: var(--color-hover);
+}
