@@ -9,7 +9,7 @@ var onready = (function() {
   let loaded = false;
   let elem = document.createElement('script');
   elem.addEventListener('load', () => loaded = true);
-  elem.src = './preset/_preset.js';
+  elem.src = './preset/actual.js';
   document.head.append(elem);
 
   return function(cb) {
