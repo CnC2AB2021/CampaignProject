@@ -1,4 +1,4 @@
-(function() {
+onready(() => {
   addStyle('donate-alert.css');
 
   let donateMessage = 'Henry isn\'t taking cooperate PAC funds. He relies on people like you. Donate';
@@ -14,4 +14,4 @@
   banner.firstElementChild.href = donateLink;
 
   content.prepend(banner);
-}());
+});

@@ -1,3 +1,3 @@
-(function() {
+onready(() => {
   addStyle('home.css');
-}());
+});

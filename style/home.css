@@ -22,7 +22,7 @@
   );
 }
 #banner__info-container {
-  padding: calc(30vh - 10vw) 15vw 0 55vw;
+  padding: calc(30vh - 10vw) 15vw 0 60vw;
 }
 #banner__info,
 #banner__info * {
@@ -66,8 +66,8 @@
   font-family: var(--font-text);
   font-size: 16px;
 }
-#join__form input:focus {
-  outline: none;
+#join__form input[required]:focus {
+  outline: 2px var(--color-border2) solid;
 }
 #join__email {
   width: 100%;

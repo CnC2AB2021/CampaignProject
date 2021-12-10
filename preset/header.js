@@ -1,16 +1,16 @@
-(function() {
+onready(() => {
   addStyle('header.css', true);
 
   let iconURL = './assets/icon.png';
   let menuItems = {
-    'About Me': './about-me',
-    'filler 1': '',
+    'Why': './why',
+    'Policies': './policies',
     'filler 2': ''
   };
 
   let header = createElems(
     [
-      { tag: 'div', id: 'header', class: 'flex-row' },
+      { tag: 'div', class: ['header', 'flex-row'] },
       [
         { tag: 'div', id: 'header__icon-container', class: 'flex-row' },
         [
@@ -39,4 +39,4 @@
   }
 
   content.prepend(header);
-}());
+});

@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 50px;
+  font-family: var(--font-header);
+  color: var(--color-text3);
+  font-size: 80px;
+  font-weight: 800;
+}
+.article-container > iframe {
+  flex-basis: 50vh;
+  width: 45vw;
+}

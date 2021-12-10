@@ -1,0 +1,19 @@
+// Flash Of Unstyled Content
+// needs to be minified to save space and load faster
+document.documentElement.style.visibility = 'hidden';
+window.addEventListener('load', () => {
+  document.documentElement.style.visibility = 'visible';
+});
+
+var onready = (function() {
+  let loaded = false;
+  let elem = document.createElement('script');
+  elem.addEventListener('load', () => loaded = true);
+  elem.src = './preset/_preset.js';
+  document.head.append(elem);
+
+  return function(cb) {
+    if (loaded) return void cb();
+    elem.addEventListener('load', cb, { once: true });
+  };
+}());

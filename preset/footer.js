@@ -1,4 +1,4 @@
-(function() {
+onready(() => {
   addStyle('footer.css', true);
 
   let iconURL = './assets/icon.png';
@@ -38,11 +38,11 @@
       'Filling 5': ''
     }
   };
-  let footnote = 'filler note';
+  let footnote = 'Henry for Chief ｜ © 2021 Ziyang Qiu';
 
   let footer = createElems(
     [
-      { tag: 'div', id: 'footer', class: 'flex-col' },
+      { tag: 'div', class: ['footer', 'flex-col'] },
       [
         { tag: 'div', id: 'footer__info', class: 'flex-col' },
         [
@@ -96,4 +96,4 @@
   footer.lastElementChild.firstElementChild.innerText = footnote;
 
   content.append(footer);
-}());
+});
