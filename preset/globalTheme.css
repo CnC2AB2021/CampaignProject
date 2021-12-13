@@ -76,7 +76,7 @@ body {
   font-weight: 600;
   transition: color 0.2s;
 }
-:where(.link:hover) {
+.link:hover {
   color: var(--color-hover);
 }
 :where(.title) {
