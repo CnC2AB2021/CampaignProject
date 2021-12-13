@@ -3,11 +3,13 @@
   padding-top: 20px;
   flex-grow: 1;
   height: 100%;
+  cursor: pointer;
 }
 #header__icon {
   object-fit: cover;
   height: 100%;
   width: auto;
+  pointer-events: none;
 }
 #header__menu-container {
   flex-grow: 2;

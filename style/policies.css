@@ -1,6 +1,7 @@
 .article-container {
   background-color: var(--color-item3);
   margin-top: 50px;
+  padding-bottom: 48px;
 }
 #banner {
   margin-top: -7vh;
@@ -10,14 +11,109 @@
   width: 95%;
   margin-top: -20vh;
 }
+
 #planks__featured-wrapper {
+  box-sizing: border-box;
   width: 100%;
+  padding-bottom: 75px;
 }
 #planks__featured-wrapper > h3 {
-  width: 50%;
   margin: 0;
-  padding: 30px 0 20px 20px;
+  font-weight: 800;
+  color: var(--color-text3);
   background-color: var(--color-background);
+  width: 50%;
+  padding: 30px 0 0 30px;
 }
 #planks__featured-container {
+  box-sizing: border-box;
+  align-items: flex-start;
+  background-color: var(--color-background);
+}
+.planks__featured {
+  flex-grow: 1;
+  padding: 30px;
+  align-items: flex-start;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.planks__featured > h4 {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-text3);
+}
+.planks__featured > h6 {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text3);
+  padding-top: 10px;
+}
+
+#planks__all-wrapper {
+  width: 100%;
+}
+#planks__all-wrapper > h3 {
+  margin: 0;
+  padding: 50px 0;
+  font-weight: 800;
+  font-size: 44px;
+  color: var(--color-header);
+  align-self: flex-start;
+}
+#planks__all-container {
+  width: 100%;
+  row-gap: 10px;
+}
+.planks__all {
+  width: 100%;
+  background-color: var(--color-background);
+  align-items: flex-start;
+}
+.planks__all-button {
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  font-weight: 800;
+  font-size: 44px;
+  color: var(--color-header);
+  cursor: pointer;
+  background-color: var(--color-background);
+  transition: background-color 0.2s;
+  position: relative;
+}
+.planks__all-button:hover {
+  background-color: var(--color-hover);
+}
+.planks__all-button::after {
+  content: '+';
+  padding: 20px;
+  font-weight: 800;
+  font-size: 44px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.planks__all-button[clicked]::after {
+  content: '-';
+  font-size: 68px;
+  top: calc(50% - 8px);
+  right: 24px;
+}
+.planks__all-text {
+  text-align: left;
+  margin: 0;
+  padding: 10px 20% 10px 100px;
+  font-family: var(--font-text);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-text);
 }

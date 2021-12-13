@@ -55,6 +55,9 @@ body {
   order: 20;
 }
 
+.hidden {
+  display: none;
+}
 :where(.flex-row, .flex-col) {
   display: flex;
   align-items: center;
@@ -159,7 +162,7 @@ body {
   height: 180px;
   width: 0px;
 }
-.article-container {
+:where(.article-container) {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -167,7 +170,7 @@ body {
   flex-grow: 1;
   overflow-x: visible;
 }
-.article-title {
+:where(.article-title) {
   text-align: left;
   margin: 0;
   padding: 0 40vw 50px 20vw;
@@ -175,4 +178,9 @@ body {
   font-size: 80px;
   line-height: 100px;
   font-weight: 800;
+}
+@media (max-width: 1200px) {
+  :where(.article-container) {
+    padding: 0 10vw 50px 5vw;
+  }
 }

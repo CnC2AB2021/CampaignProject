@@ -20,6 +20,7 @@ onready(() => {
       ]
     ]
   );
+  header.firstElementChild.addEventListener('click', () => window.location.href = './home');
   header.firstElementChild.firstElementChild.src = iconURL;
 
   for (let [name, url] of Object.entries(menuItems)) {
