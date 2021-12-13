@@ -47,7 +47,7 @@ body {
   max-width: 100%;
   flex-grow: 5;
   flex-basis: 0;
-  padding: 0 0 24px 0;
+  padding: 0;
   font-family: var(--font-text);
   color: var(--color-text);
   font-size: 18px;
@@ -78,7 +78,7 @@ body {
 }
 :where(.title) {
   font-family: var(--font-header);
-  color: var(--color-header2);
+  color: var(--color-text);
   font-size: 40px;
   font-weight: 600;
 }
@@ -123,16 +123,16 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.crop__width-center,
-.crop__height-center {
+.crop__width--center,
+.crop__height--center {
   align-items: center;
 }
-.crop__width-start,
-.crop__height-start {
+.crop__width--start,
+.crop__height--start {
   align-items: flex-start;
 }
-.crop__width-end,
-.crop__height-end {
+.crop__width--enc,
+.crop__height--end {
   align-items: flex-end;
 }
 .footer {
@@ -156,7 +156,7 @@ body {
   z-index: 100;
 }
 .header-spacer {
-  height: 200px;
+  height: 180px;
   width: 0px;
 }
 .article-container {
@@ -166,5 +166,13 @@ body {
   padding: 0 20% 0 20%;
   flex-grow: 1;
   overflow-x: visible;
-  overflow-y: auto;
+}
+.article-title {
+  text-align: left;
+  margin: 0;
+  padding: 0 40vw 50px 20vw;
+  color: var(--color-text3);
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: 800;
 }

@@ -83,16 +83,16 @@ onload(() => {
       if (c.includes('crop')) {
         imgCropCont.classList.add(c);
         switch (c) {
-          case 'crop__width-center':
-          case 'crop__width-start':
-          case 'crop__width-end':
+          case 'crop__width--center':
+          case 'crop__width--start':
+          case 'crop__width--end':
             imgCropCont.style.maxWidth = v.dataset.width;
             v.style.width = 'auto';
             imgCropCont.classList.add('flex-col');
             break;
-          case 'crop__height-center':
-          case 'crop__height-start':
-          case 'crop__height-end':
+          case 'crop__height--center':
+          case 'crop__height--start':
+          case 'crop__height--end':
             imgCropCont.style.maxHeight = v.dataset.height;
             v.style.height = 'auto';
             imgCropCont.classList.add('flex-row');
@@ -110,10 +110,14 @@ onload(() => {
       }
       v.classList.remove(c);
     });
+    if (v.id) {
+      imgPosCont.id = v.id;
+      v.id = '';
+    }
     v.classList.add('img-body');
     v.insertAdjacentElement('beforebegin', imgPosCont);
-    imgPosCont.append(imgCropCont);
     imgCropCont.append(v);
+    imgPosCont.append(imgCropCont);
   });
   Array.from(newBody.querySelectorAll('.img-body + .caption')).forEach(v => v.previousSibling.append(v));
   content.append(newBody);

@@ -1,0 +1,23 @@
+.article-container {
+  background-color: var(--color-item3);
+  margin-top: 50px;
+}
+#banner {
+  margin-top: -7vh;
+}
+#planks {
+  z-index: 10;
+  width: 95%;
+  margin-top: -20vh;
+}
+#planks__featured-wrapper {
+  width: 100%;
+}
+#planks__featured-wrapper > h3 {
+  width: 50%;
+  margin: 0;
+  padding: 30px 0 20px 20px;
+  background-color: var(--color-background);
+}
+#planks__featured-container {
+}
