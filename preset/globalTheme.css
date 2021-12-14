@@ -169,6 +169,7 @@ body {
   padding: 0 20% 0 20%;
   flex-grow: 1;
   overflow-x: visible;
+  padding-bottom: 48px;
 }
 :where(.article-title) {
   text-align: left;
