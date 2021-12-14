@@ -7,7 +7,7 @@ onready(() => {
   getCell = function(cell) {
     return new Promise((resolve, reject) => {
       fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${cell}?key=${apiKey}&majorDimension=ROWS`, { method: 'GET' }).then(res => res.json()).then(json => {
-        resolve(json.values);
+        resolve(json.values || []);
       }).catch(err => {
         reject(err);
       });
@@ -16,7 +16,7 @@ onready(() => {
   getCellRange = function(startCell, endCell) {
     return new Promise((resolve, reject) => {
       fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values:batchGet?key=${apiKey}&ranges=${startCell}:${endCell}&majorDimension=ROWS`, { method: 'GET' }).then(res => res.json()).then(json => {
-        resolve(json.valueRanges[0].values);
+        resolve(json.valueRanges[0].values || []);
       }).catch(err => {
         reject(err);
       });

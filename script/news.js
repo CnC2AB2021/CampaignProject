@@ -10,7 +10,7 @@ onready(() => {
     if (Number.isNaN(postContainer)) throw 'number of posts is not a number';
 
     data = await getCellRange('B2', 'G' + (postCount + 2));
-    data.reverse().forEach(postData => {
+    data.forEach((postData, i) => {
       let [title, date, type, summary, embed, text] = postData;
       let post = createElems(
         [
@@ -33,7 +33,7 @@ onready(() => {
           ]
         ]
       );
-      let link = `./news-article?title=${title.replace(/ /g, '-').toLowerCase()}`;
+      let link = `./news-article?id=${i + 2}`;
       post.firstElementChild.firstElementChild.innerText = title;
       post.firstElementChild.firstElementChild.href = link;
       post.lastElementChild.firstElementChild.firstElementChild.innerText = date;
@@ -42,7 +42,7 @@ onready(() => {
       post.lastElementChild.lastElementChild.innerText = 'Read More';
       post.lastElementChild.lastElementChild.href = link;
 
-      postContainer.append(post);
+      postContainer.prepend(post);
     });
   });
 });
