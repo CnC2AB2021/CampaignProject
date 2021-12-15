@@ -1,0 +1,3 @@
+onready(() => {
+  addStyle('privacy.css');
+});

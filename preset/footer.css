@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 2vh 30vw 2vh 10vw;
   align-items: flex-start;
+  row-gap: 10px;
 }
 #footer__icon-container {
   height: 10vh;
@@ -22,7 +23,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto 0 0;
   padding: 0;
 }
 .footer__topic__title {
@@ -33,12 +34,21 @@
   font-size: 22px;
   font-weight: 400;
 }
+.footer__topic__link:not(.footer__topic__link[href]) {
+  color: var(--color-hover);
+}
 .footer__footnote-container {
   width: 100%;
   flex-shrink: 0;
   text-align: center;
   padding-top: 2vh;
   padding-bottom: 1vh;
+  row-gap: 10px;
+}
+.footer__paid-for {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid var(--color-text);
 }
 .footer__footnote {
   font-family: var(--font-text);

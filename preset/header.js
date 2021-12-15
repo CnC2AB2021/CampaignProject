@@ -5,7 +5,8 @@ onready(() => {
   let menuItems = {
     'Why': './why',
     'Policies': './policies',
-    'News': './news'
+    'News': './news',
+    'Media': './media'
   };
 
   let header = createElems(

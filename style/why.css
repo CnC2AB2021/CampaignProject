@@ -1,4 +1,15 @@
+.article-container {
+  row-gap: 50px;
+}
 .article-container > iframe {
   flex-basis: 50vh;
   width: 45vw;
+}
+.article__text {
+  box-sizing: border-box;
+  align-items: flex-start;
+  width: 100%;
+  row-gap: 50px;
+  padding: 0 10vw;
+  font-size: 22px;
 }

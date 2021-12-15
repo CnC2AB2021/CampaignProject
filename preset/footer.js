@@ -3,41 +3,25 @@ onready(() => {
 
   let iconURL = './assets/icon.png';
   let menuItems = {
-    'Filler 1': {
-      'Filling 1': ''
+    'Links': {
+      'Why I am Running for Chief': './why',
+      'Policies': './policies',
+      'News and Updates': './news',
+      'Media': './media',
+      'Privacy Policy': './privacy'
     },
-    'Filler 2': {
-      'Filling 1': '',
-      'Filling 2': ''
+    'Contact Us': {
+      'P.O. Box 1734': '',
+      '(919) 856-7918': '',
+      'eyedareyoutospame@gmail.com': ''
     },
-    'Filler 3': {
-      'Filling 1': '',
-      'Filling 2': '',
-    },
-    'Filler 4': {
-      'Filling 1': '',
-      'Filling 2': '',
-      'Filling 3': '',
-      'Filling 4': ''
-    },
-    'Filler 5': {
-      'Filling 1': '',
-      'Filling 2': '',
-      'Filling 3': '',
-      'Filling 4': '',
-      'Filling 5': ''
-    },
-    'Filler 6': {
-      'Filling 1': ''
-    },
-    'Filler 7': {
-      'Filling 1': '',
-      'Filling 2': '',
-      'Filling 3': '',
-      'Filling 4': '',
-      'Filling 5': ''
+    'Social Media': {
+      'Reddit': 'https://redd.it/haucpf',
+      'YouTube': 'https://youtu.be/dQw4w9WgXcQ',
+      '!\'m bored#9538': ''
     }
   };
+  let paidFor = 'no one :_(';
   let footnote = 'Henry for Chief ｜ © 2021 Ziyang Qiu';
 
   let footer = createElems(
@@ -52,8 +36,9 @@ onready(() => {
           ],
           { tag: 'div', class: ['footer__items', 'flex-row'] }
         ],
-        { tag: 'div', class: 'footer__footnote-container' },
+        { tag: 'div', class: ['footer__footnote-container', 'flex-col'] },
         [
+          { tag: 'span', class: 'footer__paid-for' },
           { tag: 'span', class: 'footer__footnote' }
         ]
       ]
@@ -78,22 +63,36 @@ onready(() => {
     topic.firstElementChild.firstElementChild.innerText = title;
     for (let [name, url] of Object.entries(items)) {
       if (!items.hasOwnProperty(name)) continue;
-      let item = createElems(
-        [
-          { tag: 'li', class: 'footer__topic__link-container' },
+      if (url) {
+        let item = createElems(
           [
-            { tag: 'a', class: ['footer__topic__link', 'link'] }
+            { tag: 'li', class: 'footer__topic__link-container' },
+            [
+              { tag: 'a', class: ['footer__topic__link', 'link'] }
+            ]
           ]
-        ]
-      );
-      item.firstElementChild.innerText = name;
-      item.firstElementChild.href = url;
-      topic.append(item);
+        );
+        item.firstElementChild.innerText = name;
+        item.firstElementChild.href = url;
+        topic.append(item);
+      } else {
+        let item = createElems(
+          [
+            { tag: 'li', class: 'footer__topic__link-container' },
+            [
+              { tag: 'span', class: 'footer__topic__link' }
+            ]
+          ]
+        );
+        item.firstElementChild.innerText = name;
+        topic.append(item);
+      }
     }
     footer.firstElementChild.lastElementChild.append(topic);
   }
 
-  footer.lastElementChild.firstElementChild.innerText = footnote;
+  footer.lastElementChild.children[0].innerText = 'Paid for by ' + paidFor;
+  footer.lastElementChild.children[1].innerText = footnote;
 
   content.append(footer);
 });
