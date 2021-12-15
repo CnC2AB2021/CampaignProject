@@ -26,6 +26,10 @@ onready(() => {
     [
       'Shelter',
       'We will all need to do our part otherwise we will all be sleeping out in the open. The beast will attack us. The boars will attack us. We will be attacked by everything. We need to build shelters to stay safe from all of this. Nothing will be able to get to us.'
+    ],
+    [
+      'Fire',
+      'Fire is really useful. We will use it to cook our food, keep warm, and it sends out a smoke signal to ships passing by.'
     ]
   ];
 
