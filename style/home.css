@@ -4,6 +4,7 @@
   background-size: cover;
   width: 100%;
   min-height: 70vh;
+  position: relative;
 }
 #banner::before {
   user-select: none;
