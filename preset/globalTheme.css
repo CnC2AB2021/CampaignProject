@@ -17,8 +17,8 @@
   /* --color-shade: hsl(220, 40%, 20%); */
   --color-shade: hsl(195, 56%, 10%);
 
-  /* --buff: hsl(48, 81%, 75%);
-  --gold-crayola: hsl(37, 76%, 74%); */
+  /* --buff: hsl(48, 81%, 75%); */
+  /* --gold-crayola: hsl(37, 76%, 74%); */
   --font-header: Ginto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-text: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -174,7 +174,7 @@ body {
 :where(.article-title) {
   text-align: left;
   margin: 0;
-  padding: 0 40vw 50px 20vw;
+  padding: 0 30vw 50px 20vw;
   color: var(--color-text3);
   font-size: 80px;
   line-height: 100px;
