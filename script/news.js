@@ -1,6 +1,6 @@
 onready(() => {
   addStyle('news.css');
-  addScript('sheets-api.js');
+  addScript('api-sheets.js');
 
   onload(async () => {
     let postContainer = document.getElementById('posts-container');
@@ -9,9 +9,9 @@ onready(() => {
     let postCount = parseInt(data[0][0]);
     if (Number.isNaN(postContainer)) throw 'number of posts is not a number';
 
-    data = await getCellRange('B2', 'G' + (postCount + 2));
+    data = await getCellRange('B2', 'E' + (postCount + 2));
     data.forEach((postData, i) => {
-      let [title, date, type, summary, embed, text] = postData;
+      let [title, date, type, summary] = postData;
       let post = createElems(
         [
           { tag: 'div', class: ['post', 'flex-row'] },
