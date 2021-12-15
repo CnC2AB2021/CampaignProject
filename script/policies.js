@@ -21,7 +21,7 @@ onready(() => {
     ],
     [
       'Rules',
-      'We need leadership, leadership leads to unity, unity leads to productivity, productivity leads to rewards, and rewards lead to happiness. A good leader keeps everyone under control and makes sure we are getting things done. As chief, I will make sure that we are organized. When we are working, I will make sure that everyone is working efficiently.  '
+      'We need leadership, leadership leads to unity, unity leads to productivity, productivity leads to rewards, and rewards lead to happiness. A good leader keeps everyone under control and makes sure we are getting things done. As chief, I will make sure that we are organized. When we are working, I will make sure that everyone is working efficiently.'
     ],
     [
       'Shelter',
@@ -30,6 +30,10 @@ onready(() => {
     [
       'Fire',
       'Fire is really useful. We will use it to cook our food, keep warm, and it sends out a smoke signal to ships passing by.'
+    ],
+    [
+      'Punishments',
+      'I believe that violence is not the answer. Instead, rule breakers will be punished with more work. In extreme cases, they will be exiled from the group.'
     ]
   ];
 
