@@ -9,7 +9,10 @@
   box-sizing: border-box;
   align-items: flex-start;
   width: 100%;
-  row-gap: 50px;
+  row-gap: 40px;
   padding: 0 10vw;
   font-size: 22px;
+}
+.article__paragraph {
+  margin: 0;
 }
