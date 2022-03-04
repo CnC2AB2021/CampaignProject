@@ -1,7 +1,7 @@
 onready(() => {
   addStyle('donate-alert.css');
 
-  let donateMessage = 'Henry isn\'t taking cooperate PAC funds. He relies on people like you. Donate';
+  let donateMessage = 'Henry isn\'t taking corporate PAC funds. He relies on people like you. Donate';
   let donateLink = './donate';
 
   let banner = createElems([
